@@ -1,0 +1,5 @@
+<div class="cantClothesProperties">
+  <button class="btn btn-primary btn-sm" (click)="downQuantity()">-</button>
+  <input type="text" class="inputProperties" [(ngModel)] = "quantity" (keyup)="changeQuantity($event)">
+  <button class="btn btn-primary btn-sm" (click)="upQuantity()">+</button>
+</div>

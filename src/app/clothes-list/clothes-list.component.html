@@ -1,0 +1,36 @@
+<div class="containerTable">
+  <table class="table text-center">
+    <thead>
+      <tr>
+        <th scope="col">Stock</th>
+        <th scope="col">Prenda</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Talle</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Compra</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(clothe of clothes; track clothe.stock){
+      <tr>
+        @if(clothe.stock == 0){
+            <th scope="row"><p class="sinStockPorperties">Sin stock</p></th>
+        } @else {
+            <th scope="row" *ngIf="clothe.stock > 0"> {{clothe.stock}}</th>
+        }
+        <td>{{clothe.product}}</td>
+        <td>{{clothe.price}}</td>
+        <td>{{clothe.size}}</td>
+        <td><img [src] = "clothe.image" [alt] = "clothe.image" width="100" height="150"></td>
+        <td class="cantClothesProperties">
+          @if(clothe.stock > 0){
+            <app-input-number-clothing [(quantity)]="clothe.quantity" [max]="clothe.stock" (maxReached)="maxReached($event)"></app-input-number-clothing>
+            <button class="btn btn-primary" id="buttonProperties" (click)="addToCart(clothe)">Agregar</button>
+          }
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  <app-cart></app-cart>
+</div>

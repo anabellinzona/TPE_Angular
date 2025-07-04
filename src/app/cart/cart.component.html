@@ -1,0 +1,9 @@
+<div class="carrito">
+  <p class="titleProperties">{{title}}</p>
+  <ul>
+    <li *ngFor="let clothing of (cartList$ | async)" class="productsProperties">
+      {{clothing.product}}: {{clothing.quantity}}
+    </li>
+  </ul>
+</div>
+
