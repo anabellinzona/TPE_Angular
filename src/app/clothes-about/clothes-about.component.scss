@@ -1,0 +1,28 @@
+.contactsProperties{
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.titleProperties{
+  justify-self: center;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;
+}
+
+.titleProperties h1{
+  border-bottom: black 1px solid;
+}
+
+.iconsProperties{
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  gap: 50px;
+  margin-top: 60px;
+  cursor: pointer;
+  width: fit-content;
+}
