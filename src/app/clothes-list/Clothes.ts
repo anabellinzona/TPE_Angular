@@ -6,4 +6,5 @@ export interface Clothes {
     image: string;
     offer: boolean;
     quantity : number;
+    id: string;
 }

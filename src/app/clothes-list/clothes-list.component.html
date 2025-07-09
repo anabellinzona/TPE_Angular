@@ -8,6 +8,7 @@
         <th scope="col">Talle</th>
         <th scope="col">Imagen</th>
         <th scope="col">Compra</th>
+        <th scope="col">Eliminar</th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +29,9 @@
             <button class="btn btn-primary" id="buttonProperties" (click)="addToCart(clothe)">Agregar</button>
           }
         </td>
+          <td *ngIf=esAdmin()>
+            <button class="btn btn-primary" id="buttonDeleteProperties" (click)="eliminar(clothe.id)">X</button>
+          </td>
       </tr>
       }
     </tbody>

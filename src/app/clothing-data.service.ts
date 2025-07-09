@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, tap} from 'rxjs';
 import {Clothes} from './clothes-list/Clothes';
 
@@ -14,5 +14,13 @@ export class ClothingDataService {
 
   public getAll() : Observable<Clothes[]>{
     return this.http.get<Clothes[]>(URL).pipe(tap((clothes : Clothes[]) => clothes.forEach(clothes => clothes.quantity = 0)))
+  }
+
+  public addAll(clothe: Partial<Clothes>): Observable<Clothes> {
+    return this.http.post<Clothes>(URL, clothe);
+  }
+
+  public delete(id : string) : Observable<any>{
+    return this.http.delete(`${URL}/${id}`);
   }
 }

@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+  <div class="tableProperties">
+    <div class="mb-3" id="inputProperties">
+      <label for="formGroupExampleInput" class="form-label">Stock</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Stock" formControlName="stock">
+    </div>
+    <div class="mb-3" id="inputProperties1">
+      <label for="formGroupExampleInput2" class="form-label">Prenda</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prenda" formControlName="product">
+    </div>
+    <div class="mb-3" id="inputProperties2">
+      <label for="formGroupExampleInput2" class="form-label">Precio</label>
+      <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Precio" formControlName="price">
+    </div>
+    <div class="mb-3" id="inputProperties3">
+      <label for="formGroupExampleInput2" class="form-label">Prenda</label>
+      <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Talle" formControlName="size">
+    </div>
+    <div class="mb-3" id="inputProperties4">
+      <label for="formGroupExampleInput2" class="form-label">URL de la imagen</label>
+      <input type="text" class="form-control" id="formGroupExampleInput5" placeholder="URL de la imagen" formControlName="image">
+    </div>
+    <button class="btn btn-primary" id="buttonProperties" (click)="guardar()">Agregar</button>
+  </div>
+</form>
