@@ -16,11 +16,6 @@ export class ClothesListComponent implements OnInit{
   constructor(private cart : ClothingCartService, private clothingDataService: ClothingDataService, private loginService : ClothingLoginService) {
   }
 
-
-  esAdmin(): boolean {
-    return this.loginService.esAdmin();
-  }
-
   addToCart(clothing : Clothes): void {
     this.cart.addToCart(clothing);
     clothing.stock -= clothing.quantity;

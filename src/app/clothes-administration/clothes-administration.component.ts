@@ -22,8 +22,8 @@ export class ClothesAdministrationComponent implements OnInit {
     this.form = this.fb.group({
       product: ['', Validators.required],
       size: ['', Validators.required],
-      price: [0, [Validators.required, Validators.min(0)]],
-      stock: [0, [Validators.required, Validators.min(0)]],
+      price: [null, [Validators.required, Validators.min(0)]],
+      stock: [null, [Validators.required, Validators.min(0)]],
       image: ['', Validators.required]
     });
   }
