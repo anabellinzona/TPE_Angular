@@ -10,7 +10,6 @@ const routes: Routes = [
   {path: 'clothes', component: ClothesListComponent},
   {path: 'about', component: ClothesAboutComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'login',redirectTo: 'login', pathMatch: 'full' },
   {path: 'administration', component: ClothesAdministrationComponent}
 ];
 
